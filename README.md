@@ -1,5 +1,19 @@
 # IMX219 MIPI sensor 1080p/30fps video to Ultra96-V2/Kria KV260 FPGA DisplayPort
 
+# Ported IMX 219 to Aper-Oculus
+No changes are needed to run this project. The only modifications from gtaylormb's project were the MIPI data lines, the I2C address for the I2C multiplexer, and the channel to write to the MIPI interface.
+
+To build:
+* Create a Vivado project
+* Source the block diagram tcl script
+* Add the constraints file
+* Build the bitstream and export it as hardware (with bitstream included)
+* Create a Vitis platform project
+* Add source files 
+* Compile
+* Profit
+
+### -----------------  Taken from commit 07b6944
 ## News
 2021-12-18
 * I finally got my KV260 so the project works on that board now as well!
